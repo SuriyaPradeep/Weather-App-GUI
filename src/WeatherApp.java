@@ -51,7 +51,7 @@ public class WeatherApp {
 
             //Parse through our data
             JSONParser parser=new JSONParser();
-            JSONObject resultJsonObj=(JSONObject) parser.parse(String.valueOf(resultJSON));
+            JSONObject resultJsonObj=(JSONObject) parser.parse(resultJSON.toString());
 
             //Retrieve Hourly data
             JSONObject hourly=(JSONObject) resultJsonObj.get("hourly");
@@ -126,7 +126,7 @@ public class WeatherApp {
 
                 //parse the JSON string into a JSON object
                 JSONParser parser=new JSONParser();
-                JSONObject resultJsonObj=(JSONObject) parser.parse(String.valueOf(resultJson));
+                JSONObject resultJsonObj=(JSONObject) parser.parse(resultJson.toString());
 
                 //Get the list of location data the API generated from the location name
                 JSONArray locationData=(JSONArray) resultJsonObj.get("results");
